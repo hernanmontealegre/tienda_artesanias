@@ -1,0 +1,7 @@
+{
+  "name": "tienda_artesanias",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
