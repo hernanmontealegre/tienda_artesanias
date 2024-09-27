@@ -1,2 +1,39 @@
-// For information on how to create your own theme, please see:
-// http://ionicframework.com/docs/theming/
+:root {
+    /* Colores personalizados */
+    --ion-color-primary: #FF6F61;
+    --ion-color-primary-rgb: 255, 111, 97;
+    --ion-color-primary-contrast: #ffffff;
+    --ion-color-primary-contrast-rgb: 255, 255, 255;
+    --ion-color-primary-shade: #e65f54;
+    --ion-color-primary-tint: #ff7f73;
+  
+    --ion-color-secondary: #FFB88C;
+    --ion-color-secondary-rgb: 255, 184, 140;
+    --ion-color-secondary-contrast: #ffffff;
+    --ion-color-secondary-contrast-rgb: 255, 255, 255;
+    --ion-color-secondary-shade: #e6a57e;
+    --ion-color-secondary-tint: #ffc29d;
+  
+    --ion-color-light: #FFF4E6;
+    --ion-color-light-rgb: 255, 244, 230;
+  
+    --ion-color-dark: #5D4037;
+    --ion-color-dark-rgb: 93, 64, 55;
+  
+    --ion-color-warning: #FFD700;
+    --ion-color-warning-rgb: 255, 215, 0;
+  
+    --ion-background-color: #FFF4E6;
+    --ion-text-color: #5D4037;
+  
+    /* Otros colores personalizados */
+    --ion-toolbar-background: var(--ion-color-primary);
+    --ion-toolbar-text-color: var(--ion-color-primary-contrast);
+    
+    --ion-item-background: var(--ion-color-light);
+    --ion-item-color: var(--ion-color-dark);
+  
+    --ion-button-background: var(--ion-color-primary);
+    --ion-button-text-color: var(--ion-color-primary-contrast);
+  }
+  

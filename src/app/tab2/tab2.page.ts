@@ -1,16 +1,34 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
-import { ExploreContainerComponent } from '../explore-container/explore-container.component';
+import { IonicModule } from '@ionic/angular';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { FirebaseService } from '../services/firebase.service';
+import { Router } from '@angular/router';
+import { Auth, signInWithEmailAndPassword } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss'],
   standalone: true,
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent]
+  imports: [IonicModule, CommonModule, FormsModule]
 })
 export class Tab2Page {
+  email: string = '';  
+  password: string = '';  
 
-  constructor() {}
+  constructor(private auth: Auth, private router: Router) {}
 
+  login() {
+    console.log('Intentando iniciar sesión con:', this.email);  // Log del email=> registra mensaje
+    signInWithEmailAndPassword(this.auth, this.email, this.password)
+      .then(() => {
+        console.log('Login successful');  // =>no registra mensaje
+        this.router.navigate(['/tab1']);  // 
+      })
+      .catch((error) => {
+        console.error('Error during login:', error);  // Log de error =>  registra mensaje
+        
+      });
+  }
 }

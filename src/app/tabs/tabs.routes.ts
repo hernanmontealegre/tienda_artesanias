@@ -23,10 +23,15 @@ export const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: 'tab1', // Cambia la redirección aquí
         pathMatch: 'full',
       },
     ],
+  },
+  {
+    path: 'carrito',
+    loadComponent: () =>
+      import('../carrito/carrito.page').then(m => m.CarritoPage),
   },
   {
     path: '',
